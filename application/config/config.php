@@ -358,5 +358,8 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+#$config['javascript_location'] = "http://localhost/~Allison/pushup_board/assets/js/jquery-1.3.2.min.js";
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

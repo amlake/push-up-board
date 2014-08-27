@@ -56,7 +56,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = 'system';
+	$system_path = '../system';
 
 /*
  *---------------------------------------------------------------
@@ -137,16 +137,20 @@ if (defined('ENVIRONMENT'))
 	// Set the current directory correctly for CLI requests
 	if (defined('STDIN'))
 	{
+		#echo "first";
 		chdir(dirname(__FILE__));
 	}
 
 	if (realpath($system_path) !== FALSE)
 	{
+		#echo "second";
 		$system_path = realpath($system_path).'/';
 	}
 
 	// ensure there's a trailing slash
 	$system_path = rtrim($system_path, '/').'/';
+
+	#echo $system_path;
 
 	// Is the system path correct?
 	if ( ! is_dir($system_path))
