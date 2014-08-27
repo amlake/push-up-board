@@ -26,6 +26,15 @@ class Home extends CI_Controller {
    }
  }
 
+ function record()
+ {
+     $data['title'] = 'thermometer';
+
+     $this->load->view('templates/header', $data);
+     $this->load->view('thermometer_view', $data);
+     $this->load->view('templates/footer');
+ }
+
  function logout()
  {
    $this->session->unset_userdata('logged_in');
