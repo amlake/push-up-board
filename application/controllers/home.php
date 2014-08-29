@@ -5,6 +5,8 @@ class Home extends CI_Controller {
  function __construct()
  {
    parent::__construct();
+   $this->load->model('user_model');
+   $this->load->model('pushups_model');
  }
 
  function index()
@@ -28,11 +30,15 @@ class Home extends CI_Controller {
 
  function record()
  {
-     $data['title'] = 'thermometer';
+  $num_pushups = $this->input->post('number');
+  $username = $this->input->post('username');
+  $this->pushups_model->add_pushups($username, $num_pushups);
 
-     $this->load->view('templates/header', $data);
-     $this->load->view('thermometer_view', $data);
-     $this->load->view('templates/footer');
+  $data['title'] = 'thermometer';
+
+  $this->load->view('templates/header', $data);
+  $this->load->view('thermometer_view', $data);
+  $this->load->view('templates/footer');
  }
 
  function logout()

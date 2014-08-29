@@ -6,6 +6,7 @@
 
 	<label for="number">Number of push-ups</label>
 	<input type="input" name="number" /><br/>
+	<?php echo form_hidden('username', $username); ?>
 
 	<input type="submit" name="submit" value="Submit" />
 
