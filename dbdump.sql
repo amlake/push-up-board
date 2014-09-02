@@ -23,13 +23,13 @@ DROP TABLE IF EXISTS `pushups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pushups` (
-  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
-  `date` datetime NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date DEFAULT NULL,
   `count` double NOT NULL DEFAULT '0',
   `user_id` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=867 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `pushups` (
 
 LOCK TABLES `pushups` WRITE;
 /*!40000 ALTER TABLE `pushups` DISABLE KEYS */;
+INSERT INTO `pushups` VALUES (805,'2014-09-02',10,1),(806,'2014-09-02',20,1),(807,'2014-09-02',20,1),(808,'2014-09-02',20,1),(809,'2014-09-02',20,1),(810,'2014-09-02',20,1),(811,'2014-09-02',20,1),(812,'2014-09-02',20,1),(813,'2014-09-02',20,1),(814,'2014-09-02',20,1),(815,'2014-09-02',20,1),(816,'2014-09-02',20,1),(817,'2014-09-02',20,1),(818,'2014-09-02',20,1),(819,'2014-09-02',20,1),(820,'2014-09-02',20,1),(821,'2014-09-02',20,1),(822,'2014-09-02',20,1),(823,'2014-09-02',20,1),(824,'2014-09-02',20,1),(825,'2014-09-02',20,1),(826,'2014-09-02',20,1),(827,'2014-09-02',20,1),(828,'2014-09-02',20,1),(829,'2014-09-02',20,1),(830,'2014-09-02',20,1),(831,'2014-09-02',20,1),(832,'2014-09-02',20,1),(833,'2014-09-02',20,1),(834,'2014-09-02',20,1),(835,'2014-09-02',20,1),(836,'2014-09-02',20,1),(837,'2014-09-02',20,1),(838,'2014-09-02',20,1),(839,'2014-09-02',20,1),(840,'2014-09-02',20,1),(841,'2014-09-02',20,1),(842,'2014-09-02',20,1),(843,'2014-09-02',20,1),(844,'2014-09-02',20,1),(845,'2014-09-02',20,1),(846,'2014-09-02',20,1),(847,'2014-09-02',20,1),(848,'2014-09-02',20,1),(849,'2014-09-02',20,1),(850,'2014-09-02',20,1),(851,'2014-09-02',20,1),(852,'2014-09-02',20,1),(853,'2014-09-02',20,1),(854,'2014-09-02',20,1),(855,'2014-09-02',20,1),(856,'2014-09-02',20,1),(857,'2014-09-02',20,1),(858,'2014-09-02',20,1),(859,'2014-09-02',20,1),(860,'2014-09-02',20,1),(861,'2014-09-02',20,1),(862,'2014-09-02',0,1),(863,'2014-09-02',0,1),(864,'2014-09-02',20,5),(865,'2014-09-02',20,5),(866,'2014-09-02',10,5);
 /*!40000 ALTER TABLE `pushups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +54,7 @@ CREATE TABLE `users` (
   `username` varchar(10) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +63,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'bob','somepassword'),(4,'beyonce','somepassword');
+INSERT INTO `users` VALUES (1,'bob','somepassword'),(4,'beyonce','somepassword'),(5,'charles','somepassword');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-27 14:52:58
+-- Dump completed on 2014-09-02  0:43:14

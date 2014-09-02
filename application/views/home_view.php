@@ -8,8 +8,8 @@
 	<input type="input" name="number" /><br/>
 	<?php echo form_hidden('username', $username); ?>
 
-	<input type="submit" name="submit" value="Submit" />
+	<input type="submit" name="submit" value="Submit"/>
 
 </form>
 
- <a href="home/logout">Logout</a>
+ <a href= "<?php echo base_url();?>index.php/home/logout"> Logout</a>

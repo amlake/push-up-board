@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/core.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/d3.min.js" charset="UTF8"></script>
 	<?php
 		function debug_to_console( $data ) {
 

@@ -35,6 +35,8 @@ class Home extends CI_Controller {
   $this->pushups_model->add_pushups($username, $num_pushups);
 
   $data['title'] = 'thermometer';
+  $data['num_pushups_user'] = $this->pushups_model->count_pushups($username);
+  $data['num_pushups_team'] = $this->pushups_model->count_pushups();
 
   $this->load->view('templates/header', $data);
   $this->load->view('thermometer_view', $data);
